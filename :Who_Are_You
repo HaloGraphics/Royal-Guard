@@ -1,0 +1,14 @@
+var Bot = require('discord-bot');
+ 
+var bot = new Bot({
+    email: <email>,
+    password: <pass>
+});
+ 
+bot
+    .on(bot.triggers.command, ':Who_are_you')
+    .do(function(bot, conf, args) {
+        this.reply('I am the Guardian of this kingdom');
+    });
+ 
+bot.connect();
